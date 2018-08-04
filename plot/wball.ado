@@ -72,7 +72,6 @@ prog define wball
 	local num: word count `anything'
 	tokenize `anything'
 	qui fw, s h("`htmlname'")
-	qui jscopy
 	lib, b s(`scheme') o(echarts-liquidfill.min)
 
 	fw `"option = {"'
@@ -149,4 +148,5 @@ prog define wball
 	if "`htmlname'" =="" copen fw_example.html
 	if "`c(os)'" == "MacOSX"{
 		cap qui drm __MACOSX
+	}
 end
