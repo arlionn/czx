@@ -14,7 +14,6 @@ prog def kline2
 		qui cntrade2 `code', s(`start') e(`end') `stock' `index'
 		replace name = subinstr(name, " ", "", .)
 		cap file close myfile
-		jscopy
 		fw, s h(`=name[`=_N']')
 		fw `"<!DOCTYPE html>"'
 		fw `"<html style="height: 100%">"'
@@ -23,13 +22,13 @@ prog def kline2
 		fw `"   </head>"'
 		fw `"   <body style="height: 100%; margin: 0">"'
 		fw `"       <div id="container" style="height: 100%"></div>"'
-		fw `"       <script type="text/javascript" src="./js/echarts.min.js"></script>"'
-		fw `"		<script type="text/javascript" src="./js/dark.js"></script>"'
-		fw `"		<script type="text/javascript" src="./js/vintage.js"></script>"'
-		fw `"		<script type="text/javascript" src="./js/macarons.js"></script>"'
-		fw `"		<script type="text/javascript" src="./js/infographic.js"></script>"'
-		fw `"		<script type="text/javascript" src="./js/shine.js"></script>"'
-		fw `"		<script type="text/javascript" src="./js/roma.js"></script>"'
+		fw `"       <script type="text/javascript" src="http:\/\/www.czxa.top/jslib/ec/echarts.min.js"></script>"'
+		fw `"		<script type="text/javascript" src="http:\/\/www.czxa.top/jslib/ec/dark.js"></script>"'
+		fw `"		<script type="text/javascript" src="http:\/\/www.czxa.top/jslib/ec/vintage.js"></script>"'
+		fw `"		<script type="text/javascript" src="http:\/\/www.czxa.top/jslib/ec/macarons.js"></script>"'
+		fw `"		<script type="text/javascript" src="http:\/\/www.czxa.top/jslib/ec/infographic.js"></script>"'
+		fw `"		<script type="text/javascript" src="http:\/\/www.czxa.top/jslib/ec/shine.js"></script>"'
+		fw `"		<script type="text/javascript" src="http:\/\/www.czxa.top/jslib/ec/roma.js"></script>"'
 		fw `"<script type="text/javascript"> "'
 		fw `"var dom = document.getElementById("container");"'
 		fw `"var myChart = echarts.init(dom, '`scheme'');"'
